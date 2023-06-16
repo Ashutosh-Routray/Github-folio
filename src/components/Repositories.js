@@ -23,7 +23,7 @@ export default function Repositories(props) {
               Hi there, Here's all the projects I could upload to github :0
             </div>
           </div>
-          <FindRepo />
+          {/* <FindRepo /> */}
           {Array.from(user.userRepos).map((element) => {
             return (
               <RepoCard
@@ -39,18 +39,46 @@ export default function Repositories(props) {
           })}
         </div>
       ) : (
+        <div className="repositories">
         <div className="profile-card">
           <div className="about-profile">
             <h2>
-              <a href={props.html_url} target="_blank" rel="noreferrer">
-                "CODECHEF"
-              </a>{" "}
+              <a href="https://www.codechef.com/users/dodoubleg" target="_blank" rel="noreferrer">
+                Codechef
+              </a>
             </h2>
-            <p className="repo-description">"AWESOMNE CODER"</p>
+            <p className="repo-description">@dodoubleg</p>
             <div className="repo-data">
-              <span>Rating</span>
+              <span>Rating : 2024<br/>Stars : ⭐⭐⭐⭐⭐ </span>
             </div>
           </div>
+        </div>
+        <div className="profile-card">
+          <div className="about-profile">
+            <h2>
+              <a href="https://codeforces.com/profile/do-double-g" target="_blank" rel="noreferrer">
+                Codeforces
+              </a>
+            </h2>
+            <p className="repo-description">@do-double-g</p>
+            <div className="repo-data">
+              <span>Rating : 1016<br/>Tag : Newbie </span>
+            </div>
+          </div>
+        </div>
+        <div className="profile-card">
+          <div className="about-profile">
+            <h2>
+              <a href="https://leetcode.com/frailwastaken/" target="_blank" rel="noreferrer">
+                Leetcode
+              </a>
+            </h2>
+            <p className="repo-description">@frailwastaken</p>
+            <div className="repo-data">
+              <span>Rating : 1587</span>
+            </div>
+          </div>
+        </div>
         </div>
       )}
     </>

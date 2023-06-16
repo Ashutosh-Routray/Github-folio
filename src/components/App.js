@@ -7,12 +7,13 @@ import SideBar from "./SideBar";
 import Repositories from "./Repositories";
 
 function App() {
+  const [isRepo, setIsRepo] = React.useState(true);
   return (
     <>
-      <Navbar />
+      <Navbar isRepo={isRepo} setIsRepo={setIsRepo} />
       <MainContent>
         <SideBar />
-        <Repositories />
+        <Repositories isRepo={isRepo} setIsRepo={setIsRepo} />
       </MainContent>
       <Footer />
     </>

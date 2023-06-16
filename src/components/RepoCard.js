@@ -10,7 +10,9 @@ export default function RepoCard(props) {
       <div className="repo-card">
         <div className="about-repo">
           <h2>
-            <a href="./">{props.name}</a>{" "}
+            <a href={props.html_url} target="_blank" rel="noreferrer">
+              {props.name}
+            </a>{" "}
           </h2>
           <p className="repo-description">{props.description}</p>
           <div className="repo-data">

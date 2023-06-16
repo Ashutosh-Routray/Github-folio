@@ -15,15 +15,16 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUserRepos, fetchUsers } from "../app/user/userSlice";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const user = useSelector((state) => state.user);
+  // const [isActive, setIsActive] = React.useState(true);
 
   return (
     <>
       <nav className="main-nav">
-        <img src={logo} alt="logo" className="logo"/>
+        <img src={logo} alt="logo" className="logo" />
         <ul>
-        Ashutosh Routray
+          Ashutosh Routray
           {/* <li>Pulls</li>
           <li>Issues</li>
           <li>Codespaces</li>
@@ -52,7 +53,11 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faBookOpen}></FontAwesomeIcon>
               Overview
             </li> */}
-            <li className="active">
+            <li
+              className={props.isRepo ? "active" : ""}
+              onClick={() => props.setIsRepo(true)}
+              style={{ cursor: "pointer" }}
+            >
               <FontAwesomeIcon icon={faBook}></FontAwesomeIcon> Repositories{" "}
               {user.userRepos.length ? (
                 <span className="numberOfRepositories">
@@ -60,7 +65,11 @@ export default function Navbar() {
                 </span>
               ) : null}
             </li>
-            <li>
+            <li
+              className={!props.isRepo ? "active" : ""}
+              onClick={() => props.setIsRepo(false)}
+              style={{ cursor: "pointer" }}
+            >
               <FontAwesomeIcon icon={faProjectDiagram}></FontAwesomeIcon>
               Coding Profiles
             </li>

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Github-folio/static/css/main.66afc188.css",
+    "main.js": "/Github-folio/static/js/main.548a18d1.js",
+    "static/media/loading.gif": "/Github-folio/static/media/loading.b8da1acb7ea0ce17671a.gif",
+    "static/media/logo.svg": "/Github-folio/static/media/logo.97ed8e7eef60d61ca469881dd6f34511.svg",
+    "index.html": "/Github-folio/index.html",
+    "main.66afc188.css.map": "/Github-folio/static/css/main.66afc188.css.map",
+    "main.548a18d1.js.map": "/Github-folio/static/js/main.548a18d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66afc188.css",
+    "static/js/main.548a18d1.js"
+  ]
+}
